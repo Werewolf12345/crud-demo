@@ -1,4 +1,4 @@
-package com.alexeiboriskin.cruddemo;
+package com.alexeiboriskin.cruddemo.domain;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 @Entity
 @Table(name = "msc_user")
-public class MscUser {
+public class User {
     private Long id;
     private Timestamp dateCreated;
     private Timestamp dateModified;
@@ -226,7 +226,7 @@ public class MscUser {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        MscUser mscUser = (MscUser) o;
+        User mscUser = (User) o;
 
         if (id != null ? !id.equals(mscUser.id) : mscUser.id != null) return false;
         if (dateCreated != null ? !dateCreated.equals(mscUser.dateCreated) : mscUser.dateCreated != null) return false;
